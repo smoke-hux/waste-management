@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Garbage Collection</h1>
+  <h2>{{ request.user.username }}</h2>
+  <p>Total earnings: Ksh {{ total_earnings }}</p>
+  <h3>Organic garbage</h3>
+  <p>Earnings: Ksh {{ organic_earnings }}</p>
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Weight (kg)</th>
+      <th>Earnings (Ksh)</th>
+    </tr>
+    {% for collection in collections %}
+      {% if collection.type == 'organic' %}
+        <tr>
+          <td>{{ collection.type }}</td>
+          <td>{{ collection.weight }}</td>
+          <td>{{ collection.earnings }}</td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
+  <h3>Inorganic garbage</h3>
+  <p>Earnings: Ksh {{ inorganic_earnings }}</p>
+  <table>
+    <tr>
+      <th>Type</th>
+      <th>Weight (kg)</th>
+      <th>Earnings (Ksh)</th>
+    </tr>
+    {% for collection in collections %}
+      {% if collection.type == 'inorganic' %}
+        <tr>
+          <td>{{ collection.type }}</td>
+          <td>{{ collection.weight }}</td>
+        </tr>

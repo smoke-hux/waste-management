@@ -40,11 +40,12 @@ def profile(request):
     username = request.user.username
     return render(request, 'profile.html', {'username': username})
 from django.shortcuts import render
-from .models import User
+from .models import User 
+from .models import User_info
 
 def user_info(request):
     # Get the logged-in user's information
-    user = User.objects.get(username=request.user.username)
+    user = User_info.objects.get(username=request.user.username)
 
     # Pass the user's information to the template
     context = {

@@ -16,17 +16,21 @@ Including another URLconf
 from django import views
 from django.contrib import admin
 from django.urls import path
+from myapp import views
 
 
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
+    path('home/' , views.home, name='home'),
     path('profile/', views.profile, name='profile'),
+    path('user_info/', views.user_info, name='user_info'),
 ]
 
-from django.urls import path
-from myapp.views import user_info
 
-urlpatterns = [
-    path('user-info/', user_info, name='user_info'),
-]
+
+
+# urlpatterns = [
+#     path('user_info/', user_info, name='user_info'),
+# ]
