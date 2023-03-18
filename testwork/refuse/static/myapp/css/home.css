@@ -1,0 +1,9 @@
+/* this applies to the whole page */
+
+* {
+    margin: 0;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 1.6;
+}
