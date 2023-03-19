@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Admin Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="organic_garbage_collected">Organic Garbage Collected:</label>
+        <input type="text" name="organic_garbage_collected" required>
+        <br>
+        <label for="inorganic_garbage_collected">Inorganic Garbage Collected:</label>
+        <input type="text" name="inorganic_garbage_collected" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
