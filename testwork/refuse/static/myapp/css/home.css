@@ -7,3 +7,34 @@
     text-decoration: none;
     line-height: 1.6;
 }
+
+/* header of the home page */
+header {
+    background-color: gray;
+    padding: 20px;
+    color: rgb(2, 255, 183);
+}
+
+/* h1 in the header section */
+
+h1 {
+    justify-items: flex-start;
+    top: -60px;
+}
+
+/* navigation in the header  */
+
+.nav a {
+    color: rgb(2, 255, 183);
+    text-align: end;
+    padding-inline-end: 20px;
+    text-align: end;
+    float: right;
+    left: 70%;
+    top: 5%;
+}
+
+/* hover on the nav header */
+.nav a:hover {
+    color: rgb(3, 255, 24);
+}
