@@ -1,11 +1,12 @@
 {% if error %}
   <p>{{ error }}</p>
 {% endif %}
+{% load static %}
 <!DOCTYPE html>
 <html lan="en">
 <head>
   <title>Waste Management</title>
-  {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/home.css' %}"> {% endcomment %}
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/home.css' %}">
 </head>
 <body>
   <header>
@@ -23,7 +24,7 @@
     </h1>
   </header>  
 <section class='login' id='login'>
-<form method="POST" action="user_info.html">
+<form method="POST" action="">
   {% csrf_token %}
   <label for="username">Username:</label>
   <input type="text" name="username" required>
